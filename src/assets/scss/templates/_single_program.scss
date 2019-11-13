@@ -1,0 +1,225 @@
+.single-program{
+	.single-program-featured-image-container {
+		background-position: center !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		min-height: rem-calc(460);
+		position: relative;
+		.image-overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#47474a+0,ffffff+100 */
+			background: #47474a; /* Old browsers */
+			background: -moz-linear-gradient(right, #47474a 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(right, #47474a 0%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, #47474a 0%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+		.mobile-featured-image {
+			display: none;
+		}
+		.ss-inner {
+			max-width: $global-width;
+			margin: auto;
+			position: inherit;
+			.page-breadcrumbs {
+				color: white;
+				padding-top: rem-calc(40);
+				font-size: rem-calc(12);
+				a {
+					color: white;
+					font-size: rem-calc(12);
+				}
+			}	
+			h1.entry-title {
+				color: white;
+				font-family: 'Open Sans';
+				font-weight: 300;
+				max-width: 67%;
+				margin-top: 3.5rem;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+			.excerpt {
+				color: white;
+				font-size: rem-calc(14);
+				margin-top: rem-calc(30);
+				max-width: 60%;
+			}
+			.program-link {
+				margin-top: 2rem;
+				display: inline-block;
+			}
+		}
+	}
+	.wpb_wrapper {
+		h3 {
+			max-width: $global-width;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: rem-calc(43);
+		}
+		.program-procedures-filters {
+			margin-bottom: 3rem;
+			ul {
+				list-style-type: none;
+				display: flex;
+				flex-direction: row;
+				margin: 0;
+				padding: 0;
+				li {
+					margin-right: rem-calc(12);
+					a {
+						border-radius: 3px;
+					    padding: 0.5rem 1.2rem;
+					    border: 1px solid #f26522;
+					    color: #47474a;
+					    &:hover {
+						    text-decoration: none;
+						    background: get-color(primary);
+						    color: white;
+					    }
+					}
+				}
+				.active-procedure-filter {
+					a {
+						background: get-color(primary);
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	
+	.vc_tta {
+		.vc_tta-panels-container {
+			.vc_tta-panels {
+				.vc_tta-panel {
+					.vc_tta-panel-heading {
+						border-radius: 3px !important;
+						border-color: #e3e3e3 !important;
+						.vc_tta-panel-title {
+							a {
+								span {
+									font-size: rem-calc(24);
+									color: $dark-gray;
+								}
+							}
+							.vc_tta-controls-icon:before {
+								border-color: get-color(primary);
+							}
+						}
+					}
+					.vc_tta-panel-body {
+						border-left: 1px solid #dbdbdb;
+						border-right: 1px solid #dbdbdb;
+						border-bottom: 1px solid #dbdbdb;
+						border-radius: 0 0 3px 3px;
+						.wpb_text_column {
+							.wpb_wrapper {
+								p {
+									font-size: rem-calc(14);
+									color: $dark-gray;
+								}
+							}
+						}
+					}
+				}
+				.vc_tta-panel.vc_active {
+					.vc_tta-panel-heading {
+						border-radius: 3px 3px 0 0 !important;
+						border-color: #dbdbdb !important;
+					}
+				}
+			}
+		}
+	}
+	.mobile-breadcrumbs {
+		display: none;
+	}
+	@include breakpoint(small only) {
+		.mobile-breadcrumbs	{
+			padding: 0 20px;
+			display: block;
+			color: $dark-gray;
+			padding-top: rem-calc(40);
+			font-size: rem-calc(12);
+			a {
+				color: $dark-gray;
+				font-size: rem-calc(12);
+			}
+		}
+		.single-program-featured-image-container {
+			background: none !important;
+		    margin-top: 30px;
+			.page-breadcrumbs {
+				display: none;
+			}
+			.image-overlay {
+				display: none;
+			}
+			.mobile-featured-image {
+				display: block;
+				min-height: 315px;
+				background-size: cover !important;
+				background-position: center center !important;
+				background-repeat: no-repeat !important;
+			}
+			.ss-inner {
+				background: $dark-gray;
+				padding: 30px 20px;
+				h1.entry-title {
+					margin: 0;
+					max-width: 100%;
+				}
+				.excerpt {
+					max-width: 100%;
+					margin-top: 20px;
+				}
+				.program-link {
+					margin: 0 0 20px 0;
+				}
+			}
+		}
+		.main-content {
+			.entry-content {
+				&>.vc_row {
+					&>.wpb_column {
+						padding: 0;
+						h3.vc_custom_heading {
+							text-align: center !important;
+							font-size: 30px !important;
+						}
+					}
+				}
+				.program-procedures-filters {
+					margin-bottom: 1.5rem;
+					ul {
+						display: inline-block;
+						li {
+							margin-bottom: 15px;
+						    min-width: 48%;
+							display: inline-block;
+							margin-right: 0;
+							float: left;
+							a {
+								display: inline-block;
+								width: 100%;
+								text-align: center;
+							}
+							&:nth-child(odd){
+								margin-right: 4%;
+							}
+						}
+					}
+				}
+				.procedures-showcase-container {
+					a.cell {
+						padding: 0 !important;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+}

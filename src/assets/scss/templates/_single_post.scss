@@ -1,0 +1,212 @@
+.single-post {
+	h1.entry-title {
+		text-transform: uppercase;
+		width: 100%;
+	}
+	.page-breadcrumbs {
+		font-size: rem-calc(12);
+		width: 100%;
+		margin-bottom: rem-calc(55);
+		a {
+			color: $dark-gray;
+			font-size: rem-calc(12);
+			&:hover {
+				color: $dark-gray;
+				text-decoration: underline;
+			}
+		}
+		span {
+			font-size: rem-calc(12);
+			color: $black;
+		}
+	}
+	.main-wrap {
+		article {
+			margin-left: 0;
+			.featured-image-container {
+				min-height: 420px;
+				width: 100%;
+				background-size: contain !important;
+			}
+			.single-title {
+				margin: rem-calc(60 0 28 0);
+				font-family: 'Open Sans';
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			.single-meta {
+				margin-bottom: rem-calc(25);
+				.category {
+					padding: rem-calc(0 18);
+				    color: white;
+				    background: get-color(primary);
+				    border-radius: 3px;
+				    font-size: 14px;
+				    min-width: 117px;
+				    display: inline-block;
+				    text-align: center;
+				    min-height: 25px;
+				    line-height: 25px;
+				}
+				.date {
+					color: $light-gray;
+					font-size: rem-calc(12);
+					margin-left: rem-calc(8);
+				}
+			}
+			.entry-content {
+				font-size: rem-calc(14);
+			}
+			footer{
+				margin-top: rem-calc(40);
+				.tag-container {
+					border-top:1px solid $light-gray;
+					a {
+						color: $light-gray;
+						margin-right: rem-calc(18);
+					}
+				}
+				.share-buttons {
+					margin: rem-calc(20 0);
+					a {
+						background: #3b5998;
+						color: white;
+						min-width: 96px;
+						height: 25px;
+						line-height: 24px;
+						display: inline-block;
+						border: 1px solid #3b5998;
+						border-radius: 3px;
+						i {
+						    font-size: 20px;
+						    margin-left: 6px;
+						}
+						span {
+							vertical-align: 2px;
+							margin-left: 5px;
+							font-size: rem-calc(14);
+							margin-right: 6px;
+						}
+						&:hover {
+							text-decoration: none;
+							color: #3b5998;
+							background: white;
+							//border: 1px solid #3b5998;
+						}
+					}
+				}
+			}
+		}
+		.sidebar {
+			margin-top: 0;
+			h4 {
+				text-transform: uppercase;
+				margin: rem-calc(-10 0 23 0);
+			}
+			.more-posts-container {
+				.single-more-post {
+					height: 366px;
+					display: block;
+					padding: 0px;
+					margin-bottom: rem-calc(27);
+					.single-news-container {
+						height: 100%;
+						border-radius: 3px;
+						.news-image-container {
+							min-height: 217px;
+							background-repeat: no-repeat !important;
+							background-size: cover !important;
+							position: relative;
+							border-radius: 3px 3px 0 0;
+							background-position: center !important;
+							.category-container {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								background: get-color(primary);
+								border-radius: 0 3px 0 0;
+								padding: 5px 18px;
+								color: white;
+								font-size: 14px;
+								
+							}
+						}
+						.header-container {
+							height: calc(100% - 217px);
+							border-bottom: 1px solid #e3e3e3;
+							border-left: 1px solid #e3e3e3;
+							border-right: 1px solid #e3e3e3;
+							border-radius: 0 0 3px 3px;
+							background: white;
+							padding: rem-calc(20 18 10 18);
+							color: $dark-gray;
+							position: relative;
+							.news-showcase-title {
+								font-family: 'Open Sans';
+								font-size: rem-calc(18);
+								font-weight: 300;
+							}
+							.news-date-showcase {
+								color: $light-gray;
+								position: absolute;
+								bottom: 13px;
+							}
+						}
+						&:hover {
+							box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+						}
+					}
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}	
+	}
+	@include breakpoint(small only) {
+		.main-wrap {
+			padding: 0;
+			h1.entry-title {
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 20px;
+			}	
+			.page-breadcrumbs {
+				padding: 0 20px;
+				margin-bottom: 30px;
+			}
+			.main-content {
+				width: 100%;
+			    padding-bottom: 40px;
+				header {
+					.featured-image-container {
+						min-height: 230px;
+					}
+					.single-title {
+						padding: 0 20px;
+						margin-top: 30px;
+					}
+					.single-meta {
+						padding: 0 20px;
+					}
+				}
+				.entry-content {
+					padding: 0 20px;
+				}
+				footer {
+					padding: 0 20px;
+				}
+			}
+			aside.sidebar {
+				display: none;
+			}
+		}
+	}
+}
+.single {
+	.main-content {
+		.entry-content {
+			text-align: justify;
+		}
+	}
+}

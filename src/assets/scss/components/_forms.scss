@@ -1,0 +1,83 @@
+.page-template-page-contacts{
+	.vc_row{
+		margin-left: -7.5px !important;
+		margin-right: -7.5px !important;
+		#gform_wrapper_2 {
+			.gform_body {
+				ul {
+					li {
+						.ginput_container {
+							input, textarea {
+							    width: 100%;
+							    border: 0;
+							    box-shadow: none;
+							    border-bottom: 1px solid #dbdbdb;
+							    padding-left: rem-calc(20);
+							    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+								    color: $dark-gray;
+								    font-style: italic;
+								    font-size: rem-calc(14);
+								}
+								&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+								    color: $dark-gray;
+								    opacity:  1;
+								    font-style: italic;
+								    font-size: rem-calc(14);
+								}
+								&::-moz-placeholder { /* Mozilla Firefox 19+ */
+								    color: $dark-gray;
+								    opacity:  1;
+								    font-style: italic;
+								    font-size: rem-calc(14);
+								}
+								&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+								    color: $dark-gray;
+								    font-style: italic;
+								    font-size: rem-calc(14);
+								}
+								&::-ms-input-placeholder { /* Microsoft Edge */
+								    color: $dark-gray;
+								    font-style: italic;
+								    font-size: rem-calc(14);
+								}
+							}
+							textarea {
+								border-radius: 3px;
+								border: 1px solid #dbdbdb;
+							}
+						}
+						&:last-of-type {
+							.ginput_container {
+								margin-top: 47px;
+							}
+						}
+					}
+				}
+			}
+			.gform_footer {
+				padding: 0;
+				margin: rem-calc(47 0 0 0);
+				text-align: center;
+				input[type="submit"] {
+					color: $dark-gray;
+				    background: url('../../../src/assets/images/img/subs-button.png');
+				    width: 168px;
+				    height: 40px;
+				    background-size: contain;
+				    background-repeat: no-repeat;
+				    margin: 0;
+				    font-size: rem-calc(14);
+				    padding: 0;
+				    margin: 0;
+				    border: 0;
+				    border-radius: 3px;
+				    transition: all 0.1s ease-in;
+				    &:hover {
+					    background: linear-gradient(90deg, #f26522, #f4b232);
+					    color: white;
+				    }
+				}
+			}
+		}
+	}
+}

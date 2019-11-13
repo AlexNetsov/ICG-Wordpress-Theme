@@ -1,0 +1,300 @@
+.page-template-page-procedures {
+	.main-wrap {
+		h1.entry-title {
+			text-transform: uppercase;
+		}
+		.featured-procedure-container {
+			width: 100%;
+			min-height: 420px;
+			border-radius: 3px;
+			margin-top: rem-calc(45);
+			.procedure-image {
+				background-size: cover !important;
+				border-radius: 3px 0 0 3px;
+				position: relative;
+				.dates-container {
+					position: absolute;
+				    left: 0;
+				    bottom: 28px;
+				    width: 34%;
+				    background: $dark-gray;
+				    color: white;
+				    padding: 8px 0 0 0;
+				    text-align: center;
+			        border-radius: 0 3px 3px 0;
+			        .deadline {
+				        font-size: rem-calc(14);
+						width: 85%;
+						margin: auto;
+						border-bottom: 1px solid rgba(255,255,255,0.7);
+						padding-bottom: 5px;
+			        }
+			        .start-date {
+				        position: relative;
+				        padding: 6px 0;
+						font-weight: bold;
+				        img {
+					        position: absolute;
+						    left: 7.5%;
+						    top: 9px;
+				        }
+				        &:after {
+						    content: '';
+						    display: block;
+						    background: url('../../../src/assets/images/img/calendar-icon-after.png');
+						    height: 15px;
+						    width: 7px;
+						    position: absolute;
+						    background-size: contain;
+							left: 50%;
+							bottom: -11px;
+							-webkit-transform: translateX(-50%) rotate(90deg);
+							-ms-transform: translateX(-50%) rotate(90deg);
+							transform: translateX(-50%) rotate(90deg);
+					    }
+			        }
+			        .end-date {
+				        padding: 6px 0;
+				        background: get-color(primary);
+				        font-weight: bold;
+				        border-radius: 0 0 3px 0;
+			        }
+				}
+			}
+			.procedure-content {
+				background: linear-gradient(-10deg, #f26522, #f4b232);
+				background: -moz-linear-gradient(-10deg, #f26522, #f4b232);
+				background: -webkit-linear-gradient(-10deg, #f26522, #f4b232);
+				position: relative;
+				padding: rem-calc(28);
+				border-radius: 0px 3px 3px 0px;
+				h3 {
+					font-family: 'Open Sans';
+					font-weight: 300;
+					color: white;
+				}
+				.excerpt {
+					color: white;
+					font-size: rem-calc(14);
+					margin-top: rem-calc(20);
+				}
+				.read-more-button {
+					position: absolute;
+				    bottom: rem-calc(28);
+				    left: rem-calc(28);
+					border-radius: 3px;
+					border: 1px solid $white;
+					color: white;
+					width: rem-calc(168);
+					height: rem-calc(40);
+					font-size: rem-calc(14);
+					display: block;
+					line-height: rem-calc(40);
+					text-align: center;
+					&:hover {
+						color: get-color(primary);
+						background: $white;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.procedure-showcase-container {
+			margin-top: rem-calc(56);
+			margin-bottom: rem-calc(32);
+			width: 100%;
+			min-height: rem-calc(394);
+			.cell {
+				min-height: 366px;
+				padding: rem-calc(0 28 0 0);
+				margin-bottom: rem-calc(28);
+				.single-procedure-container {
+					height: 100%;
+					border-radius: 3px;
+					.procedure-image-container {
+						min-height: 217px;
+						background-repeat: no-repeat !important;
+						background-size: cover !important;
+						border-radius: 3px 3px 0 0;
+						background-position: center !important;
+					}
+					.header-container {
+						height: calc(100% - 217px);
+						border-bottom: 1px solid #e3e3e3;
+						border-left: 1px solid #e3e3e3;
+						border-right: 1px solid #e3e3e3;
+						border-radius: 0 0 3px 3px;
+						background: white;
+						padding: rem-calc(20 28 10 28);
+						color: $dark-gray;
+						.procedure-showcase-title {
+							font-family: 'Open Sans';
+							font-size: rem-calc(18);
+							font-weight: 300;
+						}
+					}
+					&:hover {
+						box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+					}
+				}
+				&:hover {
+					text-decoration: none;
+				}
+				&:nth-child(3n) {
+					padding: 0;
+				}
+			}
+		}
+		.procedures-filters {
+			margin-top: rem-calc(60);
+			width: 100%;
+			ul {
+				list-style-type: none;
+				display: flex;
+				flex-direction: row;
+				margin: 0;
+				padding: 0;
+				float: left;
+				li {
+					margin-right: rem-calc(12);
+					a {
+						border-radius: 3px;
+					    padding: 0.5rem 1.2rem;
+					    border: 1px solid #f26522;
+					    color: #47474a;
+					    &:hover {
+						    text-decoration: none;
+						    background: get-color(primary);
+						    color: white;
+					    }
+					}
+				}
+				.active-procedure-filter {
+					a {
+						background: get-color(primary);
+						color: white;
+					}
+				}
+			}
+			.procedures-filters-dropdown {
+				display: inline-block;
+				margin-left: rem-calc(16);
+				select {
+					margin: -8px 0 0 0;
+					padding-left: 40px;
+					border-top: none;
+					border-left: none;
+					border-right: none;
+					border-bottom: 1px solid #dbdbdb;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					background: url('../../../src/assets/images/img/select-arrow.png') 1% no-repeat;
+					cursor: pointer;
+					&:focus {
+						box-shadow: none;
+					}
+					&:-ms-expand { 
+			    		display: none; /* hide the default arrow in ie10 and ie11 */
+					}
+				}
+			}
+		}
+	}
+	@include breakpoint(small only) {
+		.main-wrap {
+			padding: 0;
+			h1.entry-title {
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				width: 100%;
+			}
+			.featured-procedure-container {
+				margin-top: 0;
+				.procedure-image {
+					min-height: 315px;
+					.dates-container {
+						bottom: 0;
+						width: 100%;
+						padding-top: 0;
+						.deadline {
+							display: none;
+						}
+						.start-date {
+							width: 50%;
+							float: left;
+							img {
+								left: 20px;
+							}
+							&:after {
+								left: 100%;
+								top: 50%;
+								-webkit-transform: translateY(-50%);
+								-ms-transform: translateY(-50%);
+								transform: translateY(-50%);
+							}
+						}
+						.end-date {
+							width: 50%;
+							display: inline-block;
+						}
+					}
+				}
+				.procedure-content {
+					padding: 30px 20px 10px 20px;
+					.read-more-button {
+						position: relative;
+						top: inherit;
+						left: inherit;
+						margin: 50px auto 0 auto;
+					}
+				}
+			}
+			.procedures-filters {
+				margin-bottom: 1.5rem;
+				padding: 0 20px;
+				margin-top: 45px;
+				ul {
+					display: inline-block;
+					li {
+						margin-bottom: 15px;
+					    min-width: 48%;
+						display: inline-block;
+						margin-right: 0;
+						float: left;
+						a {
+							display: inline-block;
+							width: 100%;
+							text-align: center;
+						}
+						&:nth-child(odd){
+							margin-right: 4%;
+						}
+					}
+				}
+				.procedures-filters-dropdown {
+					margin: 20px 0 0 0;
+					select {
+					    background-position: 4%;
+					    font-size: 14px;
+					    border-bottom: 1px solid get-color(primary);
+					}
+				}
+			}
+			.procedure-showcase-container {
+				padding: 0 20px;
+				margin: 35px 0 0 0;
+				a.cell {
+					padding: 0 !important;
+				}
+			}
+			.load-more-button-container {
+			    margin: 1rem 0 4rem 0;
+			    a {
+			        min-width: 50%;
+			    }
+			}
+		}
+	}
+}

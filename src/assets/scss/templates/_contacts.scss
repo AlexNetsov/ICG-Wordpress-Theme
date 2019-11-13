@@ -1,0 +1,126 @@
+@include breakpoint(small only) {
+	.page-template-page-contacts {
+		.main-wrap {
+			padding: 0;
+			.main-content {
+				header {
+					margin-bottom: 0 !important;
+				}
+				.vc_row:not(:first-of-type){
+					padding: 0 20px;
+				}
+				.vc_row:first-of-type {
+					.wpb_column:first-of-type{
+						padding: 0 27.5px 30px 27.5px;
+					}
+				}
+				.vc_row:nth-of-type(2) {
+					margin-top: 42px !important;
+				}
+				.contact-location {
+					.location-content {
+						h4 {
+							font-size: 24px;
+							margin-bottom: 10px;
+						}
+					}
+				}
+				#map-column {
+					padding: 0;
+				}
+			}	
+		}
+	}
+}
+
+// Form validation
+form {
+	.validation_error {
+		display: none !important;
+	}
+	.gform_body {
+		.gform_fields {
+			li.gfield_error {
+				background-color: inherit;
+			    margin-bottom: inherit !important;
+			    border-top: inherit;
+			    border-bottom: inherit;
+			    padding-bottom: inherit;
+			    padding-top: inherit;
+				.ginput_container {
+					input,textarea {
+						border-color: #e12e2e !important;
+						&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+						    color: #e12e2e !important;
+						}
+						&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+						   color: #e12e2e !important;
+						   opacity:  1;
+						}
+						&::-moz-placeholder { /* Mozilla Firefox 19+ */
+						   color: #e12e2e !important;
+						   opacity:  1;
+						}
+						&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+						   color: #e12e2e !important;
+						}
+						&::-ms-input-placeholder { /* Microsoft Edge */
+						   color: #e12e2e !important;
+						}
+					}
+				}
+				.gfield_description.validation_message {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+// Form confirmation
+#contact-overlay {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71,71,74,0.9);
+    top: 0;
+    left: 0;
+    text-align: center;
+    img {
+	    margin: 10% auto rem-calc(40) auto;
+	    display: block;
+    }
+    .confirmation-title {
+	    display: inline-block;
+	    font-size: rem-calc(40);
+	    text-transform: uppercase;
+	    color: white;
+	    text-align: center;
+	    max-width: rem-calc(400);
+	    margin-bottom: rem-calc(40);
+	    font-family: "Tinos", sans-serif;
+    }
+    .contact-confirmation-button {
+	    background: url('../../../src/assets/images/img/subs-button.png');
+	    width: 168px;
+	    height: 40px;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    margin: 0;
+	    font-size: 0.875rem;
+	    padding: 0;
+	    margin: auto;
+	    border: 0;
+	    border-radius: 3px;
+	    transition: all 0.1s ease-in;
+		color: white;
+	    line-height: 40px;
+	    display: block;
+	    &:hover {
+		    background: -webkit-linear-gradient(90deg, #f26522, #f4b232);
+		    background: -moz-linear-gradient(90deg, #f26522, #f4b232);
+		    background: linear-gradient(90deg, #f26522, #f4b232);
+		    text-decoration: none;
+	    }
+    }
+}

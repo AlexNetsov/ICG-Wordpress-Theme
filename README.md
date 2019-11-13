@@ -1,2 +1,2 @@
-# ICG Wordpress Theme
- Custom Wordpress Theme for the ICG website
+# FountaionPress Wordpress Theme
+ Custom FountaionPress Wordpress Theme

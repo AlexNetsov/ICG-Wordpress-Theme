@@ -1,0 +1,186 @@
+.sites-button {
+  background: $primary-color;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+  border: none;
+}
+body, section.container, .main-wrap, article.main-content, .entry-content {
+	z-index: -1;
+    position: relative;
+}
+.white-icg-button {
+	width: 100%;
+	    text-align: center;
+	    margin: 3rem 0;
+	a {
+	    border: none;
+	    display: inline-block;
+	    border-radius: 3px;
+	    text-align: center;
+	    position: relative;
+	    background: #fff;
+	    cursor: pointer;
+	    color: $dark-gray;
+	    transition: all 0.1s ease-in;
+	    min-width: 16.6667%;
+	    padding: rem-calc(14 20);
+    	&:after {
+	        position: absolute;
+		    content: '';
+		    background: -moz-linear-gradient(90deg, #f26522, #f4b232);
+		    background: -webkit-linear-gradient(90deg, #f26522, #f4b232);
+		    background: linear-gradient(90deg, #f26522, #f4b232);
+		    top: -1px;
+		    left: -1px;
+		    z-index: -1;
+		    border-radius: 3px;
+		    right: -1px;
+		    bottom: -1px;
+	    }
+	    &:hover {
+		    background: -moz-linear-gradient(90deg, #f26522, #f4b232);
+		    background: -webkit-linear-gradient(90deg, #f26522, #f4b232);
+		    background: linear-gradient(90deg, #f26522, #f4b232);
+		    color: white;
+		    text-decoration: none;
+	    }
+	}	
+}
+.transparent-icg-button {
+
+	a{
+		background: url(../../../src/assets/images/img/subs-button.png) !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+	    min-width: 192px !important;
+	    height: 47px;
+	    line-height: 47px !important;
+	    font-size: 0.875rem;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    border: 0 !important;
+	    border-radius: 3px !important;
+	    transition: all 0.1s ease-in;
+	    &:hover {
+		    background: linear-gradient(90deg, #f26522, #f4b232) !important;
+		    color: white !important;
+	    }
+	}
+}
+.vc_row {
+	z-index: -2;
+	.wpb_wrapper{
+		.white-icg-button {
+			a {
+				margin-top: 1px;
+			    border: none;
+			    border-radius: 3px;
+			    text-align: center;
+			    position: relative;
+			    background: #fff;
+			    cursor: pointer;
+			    color: $dark-gray;
+			    transition: all 0.1s ease-in;
+			    min-width: 16.6667%;
+		    	&:after {
+			        position: absolute;
+				    content: '';
+				    background: -moz-linear-gradient(90deg, #f26522, #f4b232);
+				    background: -webkit-linear-gradient(90deg, #f26522, #f4b232);
+				    background: linear-gradient(90deg, #f26522, #f4b232);
+				    top: -1px;
+				    left: -1px;
+				    z-index: -1;
+				    border-radius: 3px;
+				    right: -1px;
+				    bottom: -1px;
+			    }
+			    &:hover {
+				    background: -moz-linear-gradient(90deg, #f26522, #f4b232);
+				    background: -webkit-linear-gradient(90deg, #f26522, #f4b232);
+				    background: linear-gradient(90deg, #f26522, #f4b232);
+				    color: white;
+			    }
+			}	
+		}
+		.light-grey-icg-button {
+			a{
+				background-color: #fbfbfb;
+			}	
+		}
+		.consult-icg-button {
+			a {
+				background-color: #fafafa;
+			}
+		}
+	}
+}
+a {
+	font-size: rem-calc(14);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: -moz-linear-gradient(100deg, #f26522, #f4b232);
+    background: -webkit-linear-gradient(100deg, #f26522, #f4b232);
+    background: linear-gradient(100deg, #f26522, #f4b232);
+    width: 52px;
+    height: 52px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    //background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+@include breakpoint(small only) { 
+	#return-to-top {
+		width: 36px;
+		height: 36px;
+		i {
+			left: 10px;
+			top: 6px;
+			font-size: 16px;
+		}
+	}
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body, section.container, .main-wrap, article.main-content, .entry-content {
+		z-index: auto !important;
+    	position: relative;
+	}
+	.vc_row {
+		z-index: auto !important;
+	}
+}

@@ -1,0 +1,155 @@
+.main-wrap {
+  @include xy-grid-container;
+  @include xy-grid();
+  margin-top: 1rem;
+
+  @include breakpoint(medium) {
+    margin-top: rem-calc(44);
+  }
+  @include breakpoint(small) {
+  	padding: 0 20px;
+  }
+  &.sidebar-left {
+
+    // Place the sidebar below main content on small screens ...
+      @include breakpoint(small) {
+        .main-content { order: 1; }
+        .sidebar { order: 2; }
+      }
+
+    // ... and to the left on medium-up screens, when using the sidebar-left template
+      @include breakpoint(medium) {
+        .main-content { order: 2; }
+        .sidebar { order: 1; }
+      }
+  }
+
+  // Full width template
+  &.full-width {
+    .main-content {
+      @include xy-cell(12);
+      margin: 0 !important;
+      width: 100% !important;
+      header {
+	      margin-bottom: rem-calc(40);
+	      h1.entry-title {
+		      text-transform: uppercase;
+		      color: $dark-gray;
+		      margin: 0;
+		      .page-breadcrumbs {
+			      font-family: 'Open Sans';
+			      line-height: rem-calc(12);
+			      a {
+				      font-size: rem-calc(12);
+				      color: $dark-gray;
+				      text-transform: capitalize;
+				      &:hover {
+					      color: $dark-gray;
+					      text-decoration: underline;
+				      }
+			      }
+			      span.page-breadcrumbs-current-page {
+				      margin-left: -5px;
+				     font-size: rem-calc(12);
+				     color: $dark-gray; 
+				     text-transform: capitalize;
+			      }
+		      }
+	      }
+      }
+      .entry-content {
+	      div {
+		      ul.menu {
+			      li {
+				      margin-right: rem-calc(12);
+				      a {
+						border-radius: 3px;
+						padding: 0.5rem 1.2rem;
+						border: 1px solid get-color(primary);
+						color: $dark-gray;
+						&:hover {
+							text-decoration: none;
+							background: get-color(primary);
+							color: white;
+						}
+				      }
+				      &.current-menu-item {
+					      a {
+						      color: white;
+						      position: relative;
+						      &:after {
+							      position: absolute;
+							      content: '';
+							      display: block;
+							      width: 12px;
+							      height: 12px;
+							      background: get-color(primary);
+							      -ms-transform: rotate(45deg); /* IE 9 */
+   							      -webkit-transform: rotate(45deg); /* Safari */
+							      transform: rotate(45deg);
+							      bottom: -6px;
+							      left: calc(50% - 6px);
+						      }
+					      }
+				      }
+				      &:last-of-type {
+					      margin: 0;
+				      }
+			      }
+		      }
+	      }
+      }
+    }
+  }
+  @include breakpoint(small only) {
+	&.full-width {
+	   	.main-content {
+		   	header {
+		   		margin-bottom: rem-calc(26);
+		   		h1.entry-title {
+			   		text-align: center;
+			   		margin-top: 7px;
+			   		.page-breadcrumbs {
+				   		text-align: left;
+				   		margin-top: 20px;
+			   		}
+			   	}
+			}
+		}
+	}
+  }
+  .main-content {
+
+    // Default template
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(8);
+    }
+    
+    
+
+  }
+
+  .sidebar {
+
+/*
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(4);
+      margin-top: 1rem;
+    }
+*/
+
+  }
+}
+@include breakpoint(small only) {
+	.hide-on-mobile {
+		display: none !important;
+	}
+}

@@ -1,0 +1,114 @@
+.single-service{
+	.single-service-featured-image-container {
+		min-height: rem-calc(360);
+		.ss-inner {
+			max-width: $global-width;
+			margin: auto;
+			.page-breadcrumbs {
+				color: white;
+				padding-top: rem-calc(40);
+				font-size: rem-calc(12);
+				a {
+					color: white;
+					font-size: rem-calc(12);
+				}
+			}	
+			h1.entry-title {
+				color: white;
+				font-family: 'Open Sans';
+				font-weight: 300;
+				max-width: 65%;
+				margin-top: 3rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.service-logos-container{
+		background: #dbdbdb;
+		height: 60px;
+		.service-logos-inner {
+			max-width: $global-width;
+			margin: auto;
+			height: 100%;
+			img {
+				margin-top: 9px;
+				&:not(:first-of-type){
+					margin-left: rem-calc(50);
+				}
+			}
+		}
+	}
+	.mobile-breadcrumbs {
+		display: none;
+	}
+	@include breakpoint(small only) {
+		.mobile-breadcrumbs	{
+			padding: 0 20px;
+			display: block;
+			color: $dark-gray;
+			padding-top: rem-calc(40);
+			font-size: rem-calc(12);
+			a {
+				color: $dark-gray;
+				font-size: rem-calc(12);
+			}
+		}
+		.single-service-featured-image-container {
+			 margin-top: 30px;
+			 min-height: 230px;
+			 background-position: center !important;
+			.page-breadcrumbs {
+				display: none;
+			}
+			.ss-inner {
+				padding: 30px 20px;
+				h1.entry-title {
+					margin: 0;
+					max-width: 100%;
+				}
+			}
+		}
+		.service-logos-container {
+			height: 50px;
+			.service-logos-inner {
+				text-align: center;
+				img {
+					height: 30px;
+					width: auto;
+				}
+			}
+		}
+		.main-wrap {
+			margin: 0;
+			.entry-content {
+				.vc_row {
+					h4.vc_custom_heading {
+						font-size: 30px;
+						margin-top: 45px !important;
+					}
+					.wpb_text_column {
+						column-count: 1;
+						-webkit-column-count: 1;
+						-moz-column-count: 1;
+					}
+				}
+				#stages-row {
+					h4 {
+						margin-top: 0px !important;
+					}
+					.wpb_text_column {
+						p {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+			.white-icg-button {
+			    margin: 0 0 4rem 0;
+			    a {
+			        display: inline;
+			    }
+			}
+		}
+	}
+}

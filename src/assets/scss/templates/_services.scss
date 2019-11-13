@@ -1,0 +1,46 @@
+.page-template-page-services {
+	@include breakpoint(small only) {
+		.main-wrap {
+			padding: 0;
+			.entry-title {
+				padding: 0 20px;
+			}
+			.vc_row {
+				&>.wpb_column {
+					padding: 0;
+					.single-service-block-container {
+						min-height: 9rem;
+						border: none;
+						border-radius: 0;
+						border-top: 1px solid #dbdbdb;
+						min-height: 123px;
+						.single_service_icon {
+							padding: 0;
+							float: left;
+							font-size: 48px;
+							left: 20px;
+							@include vertical-center;
+						}
+						.single_service_text {
+							font-size: 16px;
+							padding-right: 20px;
+							padding-left: 26%;
+							width: 100%;
+							@include vertical-center;
+							p {
+								margin: 0;
+							}
+						}
+					}		
+				}
+				&:last-of-type {
+					&>.wpb_column:last-of-type {
+						a {
+							border-bottom: 1px solid #dbdbdb;
+						}
+					}
+				}
+			}
+		}
+	}
+}

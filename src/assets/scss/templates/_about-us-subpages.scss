@@ -1,0 +1,129 @@
+.page-template-page-about-us-subpages {
+	.site-header{
+		.site-navigation.top-bar{
+			ul {
+				.about-main-menu-label {
+					a{
+						color: #f26522;
+					}
+				}
+			}
+		}		
+	}
+	.about-us-subtitle {
+		color: get-color(primary);
+		font-size: rem-calc(30);
+		text-align: center;
+		margin: 4rem 0;
+	}
+	.wpb_wrapper {
+		p {
+			font-size: rem-calc(14);
+		}
+	}
+	@include breakpoint(small only) {
+		.main-wrap.full-width {
+			.main-content {
+				.entry-content {
+					.about-us-subtitle {
+						margin: 30px 0 20px 0;
+					}
+					.team-showcase {
+						margin-top: 1rem !important;
+						.wpb_column {
+							padding: 15px 0;
+							&:last-of-type {
+								padding-bottom: 0px;
+							}
+						}
+					}
+					div {
+						ul.menu {
+							li.current-menu-item {
+								a:after {
+									display: none;
+								}
+							}
+							li {
+								margin-right: 0;
+								margin-bottom: 10px;
+								min-width: 48%;
+								a {
+									text-align: center;
+									padding: 0.5rem 0.6rem;
+								}
+								&:nth-child(odd){
+									margin-right: 4%;
+								}
+							}
+						}
+					}
+					.company-row {
+					    padding-top: 40px !important;
+					    &>.wpb_column {
+						    &:first-of-type {
+							    margin-bottom: 40px;
+						    }
+						    &:nth-of-type(3){
+							    .vc_custom_heading {
+								    text-align: center !important;
+							    }
+							    .vc_row {
+								    width: 100%;
+								    text-align: center;
+								    padding: 30px 0 10px 0;
+								    .wpb_column {
+									    display: inline-block;
+									    width: 16.66667%;
+									    .vc_column-inner  {
+										    display: inline-block;
+										    .wpb_wrapper {
+											    display: inline-block;
+										    }
+									    }
+								    }
+							    }
+						    }
+					    }
+					}
+					.top-partner {
+						text-align: center;
+					    padding-top: 25px !important;
+						.wpb_column:nth-of-type(2){
+							.wpb_single_image {
+								text-align: center;
+							    margin-bottom: 25px !important;
+							}
+						}
+					}
+					.responsive-hr {
+						.vc_separator {
+							margin-top: 2rem !important;
+							margin-bottom: 2rem !important;
+						}
+					}
+					.grey-image {
+						img {
+							max-width: inherit;
+						}
+					}
+					.partners-title {
+						margin-bottom: 1.5rem !important;
+					}
+					.partners-logos {
+						margin-bottom: 0px !important;
+					}
+				}
+			}
+		}
+		.member-popup {
+			.team-member-showcase-title {
+				font-size: 24px;
+			}
+			.member-content {
+				padding: 0;
+				column-count: 1;
+			}
+		}	
+	}
+}

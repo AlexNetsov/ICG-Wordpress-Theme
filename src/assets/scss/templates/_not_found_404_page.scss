@@ -1,0 +1,41 @@
+.error404 {
+	.main-wrap-404 {
+		background: linear-gradient(-10deg, #f26522, #f4b232);
+		background: -moz-linear-gradient(-10deg, #f26522, #f4b232);
+		background: -webkit-linear-gradient(-10deg, #f26522, #f4b232);
+		text-align: center;
+		.title-404 {
+			font-size: rem-calc(100);
+			font-family: 'Open Sans';
+			font-weight: 300;
+			padding-top: rem-calc(110);
+			text-align: center;
+			color: white;
+		}
+		h4 {
+			color: white;
+			font-family: 'Open Sans';
+			font-weight: 300;
+			text-align: center;
+			margin: rem-calc(30) auto auto 0;
+			width: 40%;
+			margin: auto;
+		}
+		a {
+			min-width: 200px;
+			min-height: 42px;
+			color: white;
+			border: 1px solid white;
+			border-radius: 3px;
+			padding: rem-calc(11 25);
+			text-align: center;
+			display: inline-block;
+			margin: rem-calc(75 0 110 0);
+			&:hover {
+				background: white;
+				color: get-color(primary);
+				text-decoration: none;
+			}
+		}
+	}
+}

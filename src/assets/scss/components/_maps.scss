@@ -1,0 +1,30 @@
+#icg-map {
+	width: 100%;
+	height: 492px;
+	a[href^="http://maps.google.com/maps"]{display:none !important}
+	a[href^="https://maps.google.com/maps"]{display:none !important}
+	
+	.gmnoprint a, .gmnoprint span, .gm-style-cc {
+	    display:none;
+	}
+	.gmnoprint div {
+	    background:none !important;
+	}
+	.mf-marker {
+		text-align: left;
+		margin-left: 10%;
+		h5 {
+			font-family: 'Open Sans';
+			font-weight: 300;
+		}
+		p {
+			span {
+				display: inline-block;
+				min-width: 15px;
+			}
+		}
+	}
+	.gm-style-iw {
+		top: 16px !important;
+	}
+}
