@@ -136,7 +136,7 @@
 <?php 
 	if(is_page_template('page-templates/page-contacts.php')){
 ?>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACAgZTa1XKMkfhPA1kUjhXMtHlD1_cgC8&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 <script>
 
 var lt;
